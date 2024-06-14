@@ -1,7 +1,8 @@
-FROM centos:latest
+FROM ubuntu:latest
 
-RUN yum -y install python3 
-RUN pip3 install flask
+RUN apt update
+RUN apt install python3 python3-pip -y
+RUN pip install Flask --break-system-packages
 
 WORKDIR /webserver
 
