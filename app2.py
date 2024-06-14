@@ -1,4 +1,5 @@
-from flask import Flask,  escape, request, render_template
+from flask import Flask,  request, render_template
+from markupsafe import escape
 app = Flask(__name__)
 
 @app.route("/")
